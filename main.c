@@ -31,6 +31,7 @@
 #ifdef __TANDEM
 #include <floss.h(floss_execlp)>
 #endif
+#include "stdio.h"
 
 extern int dry_run;
 extern int list_only;
@@ -1710,6 +1711,8 @@ static void unset_env_var(const char *var)
 int main(int argc,char *argv[])
 {
 	int ret;
+
+	printf("I was here!\n");
 
 	raw_argc = argc;
 	raw_argv = argv;
